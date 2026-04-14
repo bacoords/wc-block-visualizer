@@ -2,16 +2,8 @@
 
 A developer tool that overlays visual outlines and class name labels on WooCommerce block components, making it easy to identify and target the right CSS selectors when styling Woo blocks.
 
----
+![visualizer](https://github.com/user-attachments/assets/050c7be9-9020-4a6b-8fab-6fe51aa6aa95)
 
-## Requirements
-
-- WordPress 6.0+
-- WooCommerce 8.0+
-- PHP 7.4+
-- A user account with the `manage_woocommerce` capability
-
----
 
 ## Enabling the Visualizer
 
