@@ -1,0 +1,96 @@
+/**
+ * WooCommerce Block Visualizer Styles
+ */
+
+/* Base outline styles for visualized elements */
+[data-wc-visualizer="true"] {
+	outline: 2px dashed currentColor;
+	outline-offset: 4px;
+	padding: 20px;
+	margin: 8px 0;
+}
+
+/* Blue for wc-block-components-* classes */
+[data-wc-visualizer-color="blue"] {
+	outline-color: #3b82f6;
+}
+
+/* Pink for other wc-block-* classes */
+[data-wc-visualizer-color="pink"] {
+	outline-color: #ec4899;
+}
+
+/* Green for wp-block-woocommerce-* classes */
+[data-wc-visualizer-color="green"] {
+	outline-color: #22c55e;
+}
+
+/* Hover state - solid outline, elevated */
+[data-wc-visualizer="true"]:hover {
+	outline-style: solid;
+	outline-width: 3px;
+	z-index: 9998 !important;
+}
+
+/* Label styles */
+.wc-block-visualizer-label {
+	position: absolute;
+	top: -6px;
+	left: -6px;
+	padding: 2px 6px;
+	font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+	font-size: 10px;
+	font-weight: 500;
+	line-height: 1.4;
+	white-space: nowrap;
+	cursor: pointer;
+	z-index: 9999;
+	border-radius: 4px;
+	opacity: 0.9;
+	transition: transform 0.1s ease;
+}
+
+.wc-block-visualizer-label:hover {
+	transform: scale( 1.05 );
+	opacity: 1;
+}
+
+.wc-block-visualizer-label:active {
+	transform: scale( 0.95 );
+}
+
+/* Blue label */
+.wc-block-visualizer-label[data-color="blue"] {
+	background-color: #3b82f6;
+	color: #ffffff;
+}
+
+/* Pink label */
+.wc-block-visualizer-label[data-color="pink"] {
+	background-color: #ec4899;
+	color: #ffffff;
+}
+
+/* Green label */
+.wc-block-visualizer-label[data-color="green"] {
+	background-color: #22c55e;
+	color: #ffffff;
+}
+
+/* Ensure labels are visible on hover */
+[data-wc-visualizer="true"]:hover > .wc-block-visualizer-label {
+	opacity: 1;
+	font-size: 11px;
+	padding: 3px 8px;
+}
+
+/* Print styles - hide visualizer elements */
+@media print {
+	[data-wc-visualizer="true"] {
+		outline: none !important;
+	}
+
+	.wc-block-visualizer-label {
+		display: none !important;
+	}
+}
